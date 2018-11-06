@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.gradient-background {
+    background: linear-gradient(to top left, #a8edea, #fed6e3);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
