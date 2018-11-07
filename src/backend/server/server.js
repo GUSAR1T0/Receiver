@@ -6,7 +6,8 @@ const staticPath = path.join(__dirname, '../../')
 const viewsPath = path.join(staticPath, 'views')
 
 class ServerHandler {
-    constructor(port, host) {
+    constructor(db, port, host) {
+        this.db = db
         this.port = port
         this.host = host
         this.app = Express()
@@ -18,7 +19,7 @@ class ServerHandler {
         this.app.set('views', viewsPath)
         this.app.use(Express.static(staticPath));
 
-        requests.all(this.app)
+        requests.all(this.db, this.app)
 
         return this
     }
@@ -29,8 +30,8 @@ class ServerHandler {
 }
 
 class Server {
-    launch(port, host) {
-        new ServerHandler(port, host).setup().launch()
+    launch(db, port, host) {
+        new ServerHandler(db, port, host).setup().launch()
     }
 }
 
