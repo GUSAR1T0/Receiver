@@ -1,29 +1,7 @@
-function mainPage(app) {
+function mainPage(db, app) {
     app.get("/", (req, res) => {
-        var actions = [
-            { button: "KEY_0", time: "000" },
-            { button: "KEY_1", time: "111" },
-            { button: "KEY_2", time: "222" },
-            { button: "KEY_3", time: "333" },
-            { button: "KEY_0", time: "000" },
-            { button: "KEY_1", time: "111" },
-            { button: "KEY_2", time: "222" },
-            { button: "KEY_3", time: "333" },
-            { button: "KEY_0", time: "000" },
-            { button: "KEY_1", time: "111" },
-            { button: "KEY_2", time: "222" },
-            { button: "KEY_3", time: "333" },
-            { button: "KEY_0", time: "000" },
-            { button: "KEY_1", time: "111" },
-            { button: "KEY_2", time: "222" },
-            { button: "KEY_3", time: "333" },
-            { button: "KEY_0", time: "000" },
-            { button: "KEY_1", time: "111" },
-            { button: "KEY_2", time: "222" },
-            { button: "KEY_3", time: "333" },
-        ]
         res.render("main", {
-            buactionstons: actions
+            actions: db.all()
         })
     })
 }
@@ -33,9 +11,9 @@ class Requests {
         this.requests = [mainPage]
     }
 
-    all(app) {
+    all(db, app) {
         this.requests.forEach(func => {
-            func(app)
+            func(db, app)
         })
     }
 }
