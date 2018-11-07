@@ -12,8 +12,8 @@ class ButtonAction {
     }
 
     checkSupporting() {
-        if (buttons_dictionary.hasOwnProperty(remote)) {
-            for (var i = 0; i < buttons_dictionary[remote].length; i++) {
+        if (buttons_dictionary.hasOwnProperty(this.remote)) {
+            for (var i = 0; i < buttons_dictionary[this.remote].length; i++) {
                 if (this.type === buttons_dictionary[this.remote][i]) {
                     return true
                 }

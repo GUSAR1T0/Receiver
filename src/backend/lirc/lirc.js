@@ -10,7 +10,7 @@ class Lirc {
         });
 
         lirc.on('receive', function (remote, type, repeat) {
-            button = new ButtonAction(type, remote)
+            var button = new ButtonAction(type, remote)
             if (button.checkSupporting()) {
                 console.log(button.toString() + ": was pressed");
                 db.insert(button.type, button.remote, button.time)
