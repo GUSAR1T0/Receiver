@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Receiver</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="gradient-background centered">
+    <div class="col-12">
+        <h1 class="centered col-12">Receiver</h1>
+        <hr class="col-9">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <th scope="col" class="text-center">Button</th>
+                    <th scope="col" class="text-center">RC</th>
+                    <th scope="col" class="text-center">Time</th>
+                </thead>
+                <tbody>
+                    <% actions.forEach(function(action) { %>
+                    <tr>
+                        <td class="text-center">
+                            <%= action.button %>
+                        </th>
+                        <td class="text-center">
+                            <%= action.remote %>
+                        </th>
+                        <td class="text-center">
+                            <%= action.time %>
+                        </th>
+                    </tr>
+                    <% }); %>
+                </tbody>
+                <tfoot class="thead-dark">
+                    <th scope="col" class="text-center">Button</th>
+                    <th scope="col" class="text-center">RC</th>
+                    <th scope="col" class="text-center">Time</th>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+<html>
