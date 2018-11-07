@@ -15,3 +15,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.table-responsive {
+    max-height: 75vh;
+    overflow: scroll;
+}​

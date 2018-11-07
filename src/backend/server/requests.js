@@ -1,6 +1,30 @@
 function mainPage(app) {
     app.get("/", (req, res) => {
-        res.render("main")
+        var actions = [
+            { button: "KEY_0", time: "000" },
+            { button: "KEY_1", time: "111" },
+            { button: "KEY_2", time: "222" },
+            { button: "KEY_3", time: "333" },
+            { button: "KEY_0", time: "000" },
+            { button: "KEY_1", time: "111" },
+            { button: "KEY_2", time: "222" },
+            { button: "KEY_3", time: "333" },
+            { button: "KEY_0", time: "000" },
+            { button: "KEY_1", time: "111" },
+            { button: "KEY_2", time: "222" },
+            { button: "KEY_3", time: "333" },
+            { button: "KEY_0", time: "000" },
+            { button: "KEY_1", time: "111" },
+            { button: "KEY_2", time: "222" },
+            { button: "KEY_3", time: "333" },
+            { button: "KEY_0", time: "000" },
+            { button: "KEY_1", time: "111" },
+            { button: "KEY_2", time: "222" },
+            { button: "KEY_3", time: "333" },
+        ]
+        res.render("main", {
+            buactionstons: actions
+        })
     })
 }
 
