@@ -1,4 +1,4 @@
-# GROUP 3 - Receiver
+# Receiver
 
 ## Environment
 
@@ -13,4 +13,4 @@
 
 ## Page view
 
-![main view](https://raw.githubusercontent.com/MERA-IOT-COURSE/Group3_Receiver/master/screens/main_view.png)
+![main view](/screens/main_view.png)
