@@ -77,3 +77,6 @@ typings/
 
 # Local DB
 receiver.json
+
+# macOS specific
+.DS_Store
